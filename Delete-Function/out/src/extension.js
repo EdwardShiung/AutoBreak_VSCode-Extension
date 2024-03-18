@@ -25,7 +25,6 @@ var __importStar = (this && this.__importStar) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.activate = void 0;
 const vscode = __importStar(require("vscode"));
-const parser_1 = require("@babel/parser");
 function activate(context) {
     vscode.commands.registerCommand('Delete-Function.helloWorld', () => {
         vscode.window.showInformationMessage('Hi from Delete_Function!');
@@ -34,16 +33,7 @@ function activate(context) {
         if (!editor) {
             return;
         }
-        const code = `
-			function getNum (){
-				return 'name'
-			}
-			function getNumA (){
-				return 'name'
-			}
-		`;
-        const ast = (0, parser_1.parse)(code);
-        console.log(ast);
+        //UI
         editor?.edit(editBuilder => {
             editBuilder.delete(new vscode.Range(new vscode.Position(0, 1), new vscode.Position(2, 1)));
         });

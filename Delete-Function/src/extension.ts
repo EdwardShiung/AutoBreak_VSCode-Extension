@@ -1,6 +1,5 @@
 import * as vscode from 'vscode';
-import {parse} from '@babel/parser';
-import traverse from '@babel/traverse';
+
 
 export function activate(context: vscode.ExtensionContext) {
 	vscode.commands.registerCommand(
@@ -15,18 +14,8 @@ export function activate(context: vscode.ExtensionContext) {
 			return;	
 		}
 
-		const code = `
-			function getNum (){
-				return 'name'
-			}
-			function getNumA (){
-				return 'name'
-			}
-		`;
 
-		const ast = parse(code);
-		console.log(ast);
-
+		//UI
 		editor?.edit(editBuilder=>{
 			editBuilder.delete(new vscode.Range(new vscode.Position(0,1), new vscode.Position(2,1)));
 		});
