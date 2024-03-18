@@ -35,12 +35,12 @@ function activate(context) {
             return;
         }
         const code = `
-		function getNum (){
-			return 'name'
-		}
-		function getNumA (){
-			return 'name'
-		}
+			function getNum (){
+				return 'name'
+			}
+			function getNumA (){
+				return 'name'
+			}
 		`;
         const ast = (0, parser_1.parse)(code);
         console.log(ast);
