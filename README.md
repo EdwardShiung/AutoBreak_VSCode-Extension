@@ -23,11 +23,11 @@ In order to build the environment, please follow the steps.
 ```
 
 ## Within the project hierarchy:
-    - Delete-Function
-        - src
-            - main.ts                   ---> Algorithm Layer 
-            - extension.ts              ---> Project main entry file (VSCode Layer + Algorithm Layer)
-        - test
-            - main.spec.ts              ---> npx vitest run
-        - package.json                  ---> command config
-        - tsconfig.json                 ---> source file config
+- Delete-Function
+    - src
+        - main.ts                   ---> Algorithm Layer 
+        - extension.ts              ---> Project main entry file (VSCode Layer + Algorithm Layer)
+    - test
+        - main.spec.ts              ---> npx vitest run
+    - package.json                  ---> command config
+    - tsconfig.json                 ---> source file config
