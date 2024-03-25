@@ -22,7 +22,7 @@ In order to build the environment, please follow the steps.
   npm install
 ```
 
-## Within the project hierarchy:
+## Project hierarchy:
 - Delete-Function
     - src
         - main.ts                   ---> Algorithm Layer 
