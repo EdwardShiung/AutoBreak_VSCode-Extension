@@ -1,8 +1,23 @@
 import {parse} from '@babel/parser';
 import traverse from '@babel/traverse';
 
+//Create new type
+interface FunctionNode{
+    name: string,
+    start:{
+         line: number, 
+         column: number, 
+         index: number
+    },
+    end:{
+         line: number, 
+         column: number, 
+         index: number
+    }
+}
 
-export function getFunctionNode(code:string, index:number){
+
+export function getFunctionNode(code:string, index:number): FunctionNode | undefined{
 
 
     //To get node
