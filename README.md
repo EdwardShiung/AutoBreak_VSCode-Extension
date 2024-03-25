@@ -1,13 +1,28 @@
 # Delete Function
 
 
-1. This is a VSCode extension designed to quickly delete functions. Currently, this feature is limited to general functions, and support for arrow functions, function expressions, etc., has not yet been added.
+## Introduction
 
-2. For redevelopment, please follow these steps:
-    - git clone repository
-    - npm i
+    - This is a VSCode extension designed to quickly delete functions. Currently, this feature is limited to general functions, and support for arrow functions, function expressions, etc., has not yet been added.
 
-3. Within the project hierarchy:
+## Installation
+
+In order to build the environment, please follow the steps.
+
+- Clone the Repository to Local Machine.
+
+```bash
+  git clone https://github.com/EdwardShiung/AutoDelete.git
+```
+
+- Enter to the Delete-Function file
+
+- Install the Required Dependencies by Running
+```bash
+  npm install
+```
+
+## Within the project hierarchy:
     - src
         - extension.ts ---> Project main entry file
     - test
