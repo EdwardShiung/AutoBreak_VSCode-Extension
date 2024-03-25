@@ -24,6 +24,7 @@ In order to build the environment, please follow the steps.
 
 ## Within the project hierarchy:
     - src
-        - extension.ts ---> Project main entry file
+        - main.ts ---> Algorithm Layer 
+        - extension.ts ---> Project main entry file (VSCode Layer + Algorithm Layer)
     - test
         - vitest (npx vitest run)
