@@ -12,7 +12,7 @@ In order to build the environment, please follow the steps.
 - Clone the Repository to Local Machine.
 
 ```bash
-  git clone git@github.com:EdwardShiung/Delete-Function-VSCode-Extension.git
+  git clone https://github.com/EdwardShiung/Delete-Function-VSCode-Extension.git
 ```
 
 - Enter to the Delete-Function file
