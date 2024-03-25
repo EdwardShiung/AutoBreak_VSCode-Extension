@@ -25,27 +25,40 @@ var __importStar = (this && this.__importStar) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.activate = void 0;
 const vscode = __importStar(require("vscode"));
-const parser_1 = require("@babel/parser");
+const main_1 = require("./main");
 function activate(context) {
-    vscode.commands.registerCommand('Delete-Function.helloWorld', () => {
-        vscode.window.showInformationMessage('Hi from Delete_Function!');
+    vscode.commands.registerCommand('Final_Project.deleteFunction', () => {
+        vscode.window.showInformationMessage('Delete_Function');
         //vscode找到字串名稱
         const editor = vscode.window.activeTextEditor;
         if (!editor) {
             return;
         }
-        const code = `
-		function getNum (){
-			return 'name'
-		}
-		function getNumA (){
-			return 'name'
-		}
-		`;
-        const ast = (0, parser_1.parse)(code);
-        console.log(ast);
+        ;
+        //Before getting the real code, defining fake code here
+        // const code = `
+        // 	function getNum (){
+        // 		return 'name'
+        // 	}｀
+        // 	function getNumA (){
+        // 		return 'name'
+        // 	}
+        // `;
+        //Real code data
+        const code = editor.document.getText();
+        //Before getting the real index, defining fake index here
+        // const index = 10;
+        const index = editor.document.offsetAt(editor.selection.active);
+        console.log(index);
+        //Get function node from main (Algorithm logic)
+        const functionNode = (0, main_1.getFunctionNode)(code, index);
+        //Judgement
+        if (!functionNode) {
+            return;
+        }
+        //UI + //Integrate with function Node
         editor?.edit(editBuilder => {
-            editBuilder.delete(new vscode.Range(new vscode.Position(0, 1), new vscode.Position(2, 1)));
+            editBuilder.delete(new vscode.Range(new vscode.Position(functionNode.start.line - 1, functionNode.start.column), new vscode.Position(functionNode.end.line - 1, functionNode.end.column)));
         });
     });
 }

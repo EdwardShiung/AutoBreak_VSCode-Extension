@@ -26,7 +26,7 @@ function getFunctionNode(code, index) {
         }
     });
     //To get node
-    // console.log(functionNode);
+    console.log(functionNode);
     return functionNode;
 }
 exports.getFunctionNode = getFunctionNode;

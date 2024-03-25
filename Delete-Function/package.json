@@ -1,6 +1,6 @@
 {
-  "name": "Delete-Function",
-  "displayName": "Delete_Function",
+  "name": "test",
+  "displayName": "test",
   "description": "",
   "version": "0.0.1",
   "engines": {
@@ -9,19 +9,13 @@
   "categories": [
     "Other"
   ],
-  "activationEvents": [
-    "Delete-Function.helloWorld"
-  ],
+  "activationEvents": [],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "Delete-Function.helloWorld",
-        "title": "Hello World"
-      },
-      {
-        "command": "Hi",
-        "title": "hi"
+        "command": "Final_Project.deleteFunction",
+        "title": "Delete Function"
       }
     ]
   },
@@ -34,7 +28,6 @@
     "test": "vitest"
   },
   "devDependencies": {
-    "@babel/traverse": "^7.24.0",
     "@types/babel__traverse": "^7.20.5",
     "@types/mocha": "^10.0.6",
     "@types/node": "18.x",
@@ -44,10 +37,11 @@
     "@vscode/test-cli": "^0.0.6",
     "@vscode/test-electron": "^2.3.9",
     "eslint": "^8.56.0",
-    "typescript": "^5.3.3",
-    "vitest": "^1.4.0"
+    "typescript": "^5.3.3"
   },
   "dependencies": {
-    "@babel/parser": "^7.24.0"
+    "@babel/parser": "^7.24.0",
+    "@babel/traverse": "^7.24.0",
+    "yo": "^5.0.0"
   }
 }

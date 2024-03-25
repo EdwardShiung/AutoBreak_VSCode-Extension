@@ -1,5 +1,5 @@
 const vitest =  await import('vitest');
-import { expect } from 'vitest';
+import { test, expect } from 'vitest';
 import { getFunctionNode } from '../src/main';
 
 
@@ -38,7 +38,6 @@ vitest.test('init', ()=>{
                index: 55
           }
      });
-
 });
 
 
