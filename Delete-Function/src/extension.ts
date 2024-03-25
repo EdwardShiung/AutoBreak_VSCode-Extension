@@ -1,3 +1,4 @@
+
 import * as vscode from 'vscode';
 
 
@@ -13,7 +14,6 @@ export function activate(context: vscode.ExtensionContext) {
 		if(!editor) {
 			return;	
 		}
-
 
 		//UI
 		editor?.edit(editBuilder=>{
