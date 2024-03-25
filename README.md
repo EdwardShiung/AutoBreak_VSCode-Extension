@@ -1,4 +1,4 @@
-# Delete Function
+# Delete Function Extension
 
 
 ## Introduction
