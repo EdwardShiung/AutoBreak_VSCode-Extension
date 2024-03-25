@@ -3,7 +3,7 @@
 
 ## Introduction
 
-    - This is a VSCode extension designed to quickly delete functions. Currently, this feature is limited to general functions, and support for arrow functions, function expressions, etc., has not yet been added.
+    This is a VSCode extension designed to quickly delete functions. Currently, this feature is limited to general functions, and support for arrow functions, function expressions, etc., has not yet been added.
 
 ## Installation
 
