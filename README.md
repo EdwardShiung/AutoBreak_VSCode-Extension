@@ -31,3 +31,16 @@ In order to build the environment, please follow the steps.
         - main.spec.ts              ---> npx vitest run
     - package.json                  ---> command config
     - tsconfig.json                 ---> source file config
+
+## How to use
+
+After installing all of the package, please activate the debugging mode in the VSCode environment.
+--> Press F5
+
+Then, please call the input section from VSCode:
+For window: Ctrl + Shift + P
+For Mac: Command + Shift + P
+
+Basic Command:
+- Delete Function: deleteFunction
+- Breakpoint: breakPointFunction
