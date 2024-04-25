@@ -43,6 +43,12 @@ For Mac: Command + Shift + P
 
 Basic Command:
 
-- Delete Function: deleteFunction
-- Breakpoint: breakPointFunction
+- Delete Function: 
+```
+deleteFunction
+```
+- Breakpoint: 
+```
+breakPointFunction
+```
 
