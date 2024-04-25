@@ -42,5 +42,7 @@ For window: Ctrl + Shift + P
 For Mac: Command + Shift + P
 
 Basic Command:
+
 - Delete Function: deleteFunction
 - Breakpoint: breakPointFunction
+
