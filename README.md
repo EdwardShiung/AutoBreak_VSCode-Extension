@@ -1,9 +1,8 @@
-# Delete Function Extension
-
+# AutoBreak
 
 ## Introduction
 
-This is a VSCode extension designed to quickly delete functions. Currently, this feature is limited to general functions, and support for arrow functions, function expressions, etc., has not yet been added.
+This is a VSCode extension designed to quickly display Breakpoint.
 
 ## Installation
 
@@ -15,7 +14,7 @@ In order to build the environment, please follow the steps.
   git clone https://github.com/EdwardShiung/Delete-Function-VSCode-Extension.git
 ```
 
-- Enter to the Delete-Function file
+- Enter to the AutoBreak file
 
 - Install the Required Dependencies by Running
 ```bash
@@ -27,6 +26,7 @@ In order to build the environment, please follow the steps.
     - src
         - main.ts                   ---> Algorithm Layer 
         - extension.ts              ---> Project main entry file (VSCode Layer + Algorithm Layer)
+    - out                           ---> npm run compile 
     - test
         - main.spec.ts              ---> npx vitest run
     - package.json                  ---> command config
