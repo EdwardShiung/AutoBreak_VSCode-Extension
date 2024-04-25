@@ -38,8 +38,15 @@ After installing all of the package, please activate the debugging mode in the V
 --> Press F5
 
 Then, please call the input section from VSCode:
-For window: Ctrl + Shift + P
-For Mac: Command + Shift + P
+
+- For window: 
+```
+Ctrl + Shift + P
+```
+- For Mac: 
+```
+Command + Shift + P
+```
 
 Basic Command:
 
