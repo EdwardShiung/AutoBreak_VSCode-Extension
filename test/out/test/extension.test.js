@@ -25,7 +25,7 @@ var __importStar = (this && this.__importStar) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.activate = void 0;
 const vscode = __importStar(require("vscode"));
-const main_1 = require("./main");
+const main_1 = require("../main");
 function activate(context) {
     vscode.commands.registerCommand('Final_Project.deleteFunction', () => {
         vscode.window.showInformationMessage('Hi from Delete_Function!');
@@ -34,7 +34,6 @@ function activate(context) {
         if (!editor) {
             return;
         }
-        ;
         //Before getting the real code, defining fake code here
         // const code = `
         // 	function getNum (){
@@ -62,4 +61,4 @@ function activate(context) {
     });
 }
 exports.activate = activate;
-//# sourceMappingURL=extension.js.map
+//# sourceMappingURL=extension.test.js.map

@@ -26,41 +26,49 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.activate = void 0;
 const vscode = __importStar(require("vscode"));
 const main_1 = require("./main");
-function activate(context) {
-    vscode.commands.registerCommand('Final_Project.deleteFunction', () => {
-        vscode.window.showInformationMessage('Delete_Function');
-        //vscode找到字串名稱
+function deleteFunction(commandName) {
+    return () => {
+        vscode.window.showInformationMessage('Delete Function Successfully');
         const editor = vscode.window.activeTextEditor;
         if (!editor) {
             return;
         }
-        ;
-        //Before getting the real code, defining fake code here
-        // const code = `
-        // 	function getNum (){
-        // 		return 'name'
-        // 	}｀
-        // 	function getNumA (){
-        // 		return 'name'
-        // 	}
-        // `;
-        //Real code data
         const code = editor.document.getText();
-        //Before getting the real index, defining fake index here
-        // const index = 10;
         const index = editor.document.offsetAt(editor.selection.active);
-        console.log(index);
-        //Get function node from main (Algorithm logic)
         const functionNode = (0, main_1.getFunctionNode)(code, index);
-        //Judgement
         if (!functionNode) {
             return;
         }
-        //UI + //Integrate with function Node
-        editor?.edit(editBuilder => {
+        editor.edit(editBuilder => {
             editBuilder.delete(new vscode.Range(new vscode.Position(functionNode.start.line - 1, functionNode.start.column), new vscode.Position(functionNode.end.line - 1, functionNode.end.column)));
         });
-    });
+    };
+}
+function breakPointFunction(commandName) {
+    return () => {
+        vscode.window.showInformationMessage('Breakpoint Successfully');
+        const editor = vscode.window.activeTextEditor;
+        if (!editor) {
+            vscode.window.showErrorMessage('No Function');
+            return;
+        }
+        const code = editor.document.getText();
+        const allFunctionNode = (0, main_1.getAllFunctionNode)(code);
+        if (!allFunctionNode) {
+            return;
+        }
+        const breakpoints = [];
+        for (let i = 0; i < allFunctionNode.length; i++) {
+            console.log(allFunctionNode[i].loc?.start);
+            breakpoints.push(new vscode.SourceBreakpoint(new vscode.Location(editor.document.uri, new vscode.Position(allFunctionNode[i].loc.start.line, allFunctionNode[i].loc.end.column - 1))));
+        }
+        vscode.debug.addBreakpoints(breakpoints);
+    };
+}
+function activate(context) {
+    //Multiple Functions --> Framework
+    vscode.commands.registerCommand('Final_Project.deleteFunction', deleteFunction('Final_Project.deleteFunction'));
+    vscode.commands.registerCommand('Final_Project.breakPointFunction', breakPointFunction('Final_Project.breakPointFunction'));
 }
 exports.activate = activate;
 //# sourceMappingURL=extension.js.map
