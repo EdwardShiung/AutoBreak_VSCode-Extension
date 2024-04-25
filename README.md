@@ -11,7 +11,7 @@ In order to build the environment, please follow the steps.
 - Clone the Repository to Local Machine.
 
 ```bash
-  git clone https://github.com/EdwardShiung/Delete-Function-VSCode-Extension.git
+  git clone https://github.com/EdwardShiung/AutoBreak_VSCode-Extension.git
 ```
 
 - Enter to the AutoBreak file
